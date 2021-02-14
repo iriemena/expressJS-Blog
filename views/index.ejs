@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+
+  <body>
+
+    <%- include('./partials/nav.ejs') %>
+
+      <div class="home" id="blog">
+        <% blogs.forEach((blog)=>{%>
+          <a style="color: black" class="none" href="/<%=blog._id%>">
+            <h2 class="title">
+              <%= blog.title %>
+            </h2>
+            
+            <p class="snippet">
+              <%= blog.snippet %>
+            </p>
+          </a>
+          <%})%>
+      </div>
+
+      <%- include('./partials/side.ejs') %>
+
+        <%- include('./partials/footer.ejs') %>
+  </body>
+
+</html>
