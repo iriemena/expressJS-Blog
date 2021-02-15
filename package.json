@@ -4,8 +4,8 @@
   "description": "Blog",
   "main": "app.js",
   "scripts": {
-    "start": "node app",
-    "dev": "nodemon app"
+    "start": "node app"
+    
   },
   "author": "Fortune",
   "license": "ISC",

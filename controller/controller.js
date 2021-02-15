@@ -24,7 +24,7 @@ const index = (req, res) => {
       res.render('index', { title: 'All-blogs', blogs: result })
     })
     .catch(err => {
-      res.status(500).send(err)
+      res.status(500).send('Problem connecting to the server, try again later')
     })
 }
 
