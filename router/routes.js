@@ -1,5 +1,5 @@
-const express = require('express');
-const router = express.Router();
+const express = require('express')
+const router = express.Router()
 // import controller
 const controller = require('../controller/controller')
 
@@ -7,7 +7,7 @@ const controller = require('../controller/controller')
 router.post('/', controller.post)
 
 // home page (all blogs)
-router.get('/', controller.index) 
+router.get('/', controller.index)
 
 // about
 router.get('/about', controller.about)

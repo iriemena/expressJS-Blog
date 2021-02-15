@@ -4,6 +4,9 @@
   <body>
     <%- include('./partials/nav.ejs') %>
     <div class="details" id="blog">
+      <small style="color: blue; font-size: 0.8rem"
+        ><%= blog.createdAt.toString().split(' ').slice(0, 5).join(' ') %> </small
+      ><br />
       <h2>
         <%= blog.title %>
       </h2>
@@ -13,12 +16,15 @@
         </p>
       </div>
 
-      <a class="delete" data-idd="<%= blog._id %>"><i class="fas fa-trash-alt"></i></a>
+      <a class="delete" data-idd="<%= blog._id %>"
+        ><i class="fas fa-trash-alt"></i
+      ></a>
     </div>
 
     <%- include('./partials/side.ejs') %> <%- include('./partials/footer.ejs')
     %>
 
+    <!-- vanilla javascript -->
     <script>
       const del = document.querySelector('a.delete')
 
